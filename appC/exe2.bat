@@ -1,0 +1,2 @@
+aleatorias.exe
+pause

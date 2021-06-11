@@ -1,0 +1,71 @@
+Toda esta metodologia usada es metodologia para generar componentes con java Beans se menciona  en el libro 
+COMPONENT-ORIENTED PROGRAMMING
+
+en el capitulo capitulo 3 COP WITH JAVABEANS
+
+el archivo.java debe estar dentro de un paquete y tener la siguiente sintaxis dentro de la clase
+package nombredelpaquete;
+
+y la clase debe implementar de la clase Serializable de la siguiente manera
+
+public class nombreDelaclase implements Serializable {
+	//codigo dentro de la clase 
+}
+
+para usar Serializable se debe exportar la libreria 
+	import java.io.Serializable;
+o de la siguiente manera
+	import java.io.*;
+
+los comandos nesesarios para compilar, ejecutar, y verificar los archivos son los siguientes
+
+para compilar el archivo tiene que tener extencion.java se usara el comando desde consola javac
+de la siguiente manera para ser compilado 
+
+javac nombreDelArchivo.java       
+
+otra forma de compilar el archivo desde consola y creando un directorio que se nombra con el nombre
+del paquete interno de la clase, y guarda el archivo.class dentro del directorio creado automaticamente  
+
+javac -d . AppParametrosConsole.java  
+
+para crear el archivo jar es nesesario crear un archivo manifest.tmp que contenga las siguintes declaraciones
+
+Sintaxis
+Main-Class: nombreDelPaquete.nombreDelaClase            accesar al paquete donde se encuentra la clase
+Name: nombreDelPaquete/nombreDelaClase.class	        detectar la clase que se hara el bean 
+Java-Bean: True
+
+
+Ejemplo
+Main-Class: appparametrosconsole.AppParametrosConsole
+Name: appparametrosconsole/AppParametrosConsole.class
+Java-Bean: True
+
+despues de tener el el archivo manifest.tmp configurado 
+tener listo el directorio que tiene el archivo.class
+se prosigue a crear el archivo.jar con la siguiente sintaxis
+
+jar cfm AppParametrosConsole.jar manifest.tmp appparametrosconse\*.*  
+
+para verificar el archivo AppParametrosConsole.jar
+
+jar tvf  AppParametrosConsole.jar | more
+
+para ejecutar el archivo.jar
+
+java -jar AppParametrosConsole.jar
+
+
+-------------------------------------------------------------------
+Ejmplo de comandos a usar para hacer componente todo por consola y teniendo archivo .bat
+para ejecutar el compoente .jar
+
+javac -d . AppParametrosConsole.java       o   javac AppParametrosConsole.java
+
+jar cfm AppParametrosConsole.jar manifest.tmp appparametrosconsole\*.*
+
+java -jar AppParametrosConsole.jar -90 
+java -jar AppParametrosConsole.jar 		con y sin parametros  
+
+

@@ -1,0 +1,1 @@
+java -jar AppParametrosConsole.jar -90 -23

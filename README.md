@@ -1,0 +1,1 @@
+recordar tener todos los interpretes y compiladores instalados
