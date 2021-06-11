@@ -5,3 +5,5 @@ Esto podria ser utili cuando tenemos distintos programas con distintas funciones
 Para entender este concepto de ensamble de componentes podemos consultar una buana referencia que podemos encontrar en la teoria metodologia de componentes en:
   
 - Component- Oriented Development and Assembly Paradigm, Principles, and Practice Using Java Piram Manickam S. Sangeetha S. V. Subrahmanya
+
+Donde promulgan el uso de componentes reusables de software
